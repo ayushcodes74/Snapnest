@@ -1,7 +1,7 @@
 
 import React from 'react';
 import axios from 'axios';
-
+const API_URL = import.meta.env.VITE_API_BASE_URL;
 const CreatePost = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -10,7 +10,7 @@ const CreatePost = () => {
 
         try {
             await axios.post(
-                'http://localhost:3000/create-post',
+                `${API_URL}/create-post`,
                 formData
             );
 

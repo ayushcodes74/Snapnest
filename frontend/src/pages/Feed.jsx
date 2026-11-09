@@ -14,7 +14,7 @@ const Feed = () => {
 
     useEffect(()=>{
 
-        axios.get("http://localhost:3000/posts")
+        axios.get(`${API_URL}/posts`)
         .then((res)=>{
 
             setPosts(res.data.posts)
